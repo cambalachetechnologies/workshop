@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>¡Gracias! Inscripción Confirmada | Salesforce Foundations Workshop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Paleta de Colores Salesforce */
+        :root {
+            --sf-dark-blue: #032D60; /* Azul Oscuro (Primario) */
+            --sf-blue: #0070D2; /* Azul Salesforce (Acento) */
+            --sf-light-blue: #1589EE; /* Azul Claro (Botones) */
+            --sf-success: #28a745; /* Verde para éxito */
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa; /* Fondo blanco/gris claro */
+            color: var(--sf-dark-blue);
+        }
+        .bg-primary-sf {
+            background-color: var(--sf-dark-blue) !important;
+        }
+        .text-accent-sf {
+            color: var(--sf-blue) !important;
+        }
+        .btn-sf {
+            background-color: var(--sf-light-blue);
+            border-color: var(--sf-light-blue);
+            color: white;
+            transition: all 0.3s;
+        }
+        .btn-sf:hover {
+            background-color: var(--sf-blue);
+            border-color: var(--sf-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        .thank-you-container {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .confirmation-box {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--sf-success); /* Borde de éxito */
+        }
+        .icon-success {
+            color: var(--sf-success);
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+        }
+        .next-steps-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .next-steps-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px dashed #e9ecef;
+            font-size: 1.1rem;
+        }
+        .next-steps-list li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="thank-you-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="confirmation-box">
+                        
+                        <div class="icon-success">
+                            <i class="bi bi-check-circle-fill"></i>
+                        </div>
+
+                        <h1 class="display-5 fw-bold text-success mb-3">
+                            ¡Inscripción confirmada!
+                        </h1>
+                        <p class="lead mb-4 text-primary-sf">
+                            Gracias por registrarte en el Salesforce Foundations Workshop: <br>Marketing y Data
+                        </p>
+
+                        <div class="alert alert-info border-0 p-3" role="alert" style="background-color: #e6f3ff;">
+                            <h5 class="fw-bold text-accent-sf mb-1"><i class="bi bi-calendar-event me-2"></i> Detalles del evento</h5>
+                            <p class="mb-0 small text-primary-sf">
+                                Fecha: Miércoles, 10 de Diciembre de 2025<br>
+                                Hora: 12:00 ARG (Revisa tu zona horaria)<br>
+                                Modalidad: Online
+                            </p>
+                        </div>
+
+                        <hr>
+
+                        <h4 class="fw-bold text-primary-sf mt-4 mb-3">
+                            Pasos siguientes importantes:
+                        </h4>
+                        
+                        <ul class="next-steps-list">
+                            <li>
+                                <span class="badge bg-success me-2">1</span> Revisa tu correo: Te enviaremos un email de confirmación con el enlace de acceso al Workshop y las instrucciones finales.
+                            </li>
+                            <li>
+                                <span class="badge bg-success me-2">2</span> Prepara tus preguntas: Piensa en las áreas de Marketing y Data de tu CRM actual que deseas optimizar para aprovechar la sesión de preguntas y respuestas.
+                            </li>
+                        </ul>
+
+                        <div class="mt-4">
+                            <a href="/" class="btn btn-sf btn-lg">
+                                <i class="bi bi-arrow-left me-2"></i> Volver al inicio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-primary-sf text-white py-3">
+        <div class="container text-center">
+            <p class="mb-0 small">© 2025 Salesforce Foundations Workshop | Potencia tu CRM.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
