@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscripción | Salesforce Foundations Workshop Marketing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Paleta de Colores Salesforce */
+        :root {
+            --sf-dark-blue: #032D60; /* Azul Oscuro (Primario) */
+            --sf-blue: #0070D2; /* Azul Salesforce (Acento) */
+            --sf-light-blue: #1589EE; /* Azul Claro (Botones) */
+            --sf-gray-bg: #F4F6F9; /* Fondo Gris Claro */
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--sf-gray-bg);
+            color: var(--sf-dark-blue);
+        }
+        .bg-primary-sf {
+            background-color: var(--sf-dark-blue) !important;
+        }
+        .text-primary-sf {
+            color: var(--sf-dark-blue) !important;
+        }
+        .text-accent-sf {
+            color: var(--sf-blue) !important;
+        }
+        .btn-sf {
+            background-color: var(--sf-light-blue);
+            border-color: var(--sf-light-blue);
+            color: white;
+            transition: all 0.3s;
+        }
+        .btn-sf:hover {
+            background-color: var(--sf-blue);
+            border-color: var(--sf-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+        .form-control:focus {
+            border-color: var(--sf-light-blue);
+            box-shadow: 0 0 0 0.25rem rgba(0, 112, 210, 0.25);
+        }
+        .sf-card-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .hero-section {
+            /* Fondo azul oscuro con degradado sutil */
+            background: linear-gradient(rgba(3, 45, 96, 0.8), rgba(3, 45, 96, 0.9)), url('img/fondo.jpg'); 
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            color: white;
+            position: relative;
+        }
+        .countdown-box {
+            background-color: white;
+            color: var(--sf-dark-blue);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+        }
+        .navbar-light-custom {
+            background-color: white !important;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        /* Estilos para los logos en el Navbar */
+        .navbar-logo {
+            max-height: 30px; /* Ajusta la altura máxima para que no sean demasiado grandes */
+            margin-right: 15px;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+        .temario-card {
+            border-left: 5px solid var(--sf-blue);
+            border-radius: 0.5rem;
+            transition: transform 0.2s;
+        }
+        .temario-card:hover {
+            transform: translateY(-3px);
+            border-left: 5px solid var(--sf-light-blue);
+        }
+        .badge-sf {
+            background-color: var(--sf-blue);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/logo-ctech.png" alt="Logo Cambalache Technologies" class="navbar-logo d-none d-md-block">
+                <img src="img/logo-quintum.png" alt="Logo Quintum" class="navbar-logo d-none d-md-block">
+                <img src="img/logo-partner.png" alt="Salesforce Partner" class="navbar-logo">
+                
+                <span class="fw-bold fs-5 text-primary-sf d-md-none">Foundation<span class="text-accent-sf">Workshop</span></span>
+            </a>
+            
+            <button type="button" class="btn btn-sf fw-bold" onclick="document.getElementById('registro-form').scrollIntoView({ behavior: 'smooth' });">
+                <i class="bi bi-rocket-takeoff-fill me-1"></i> Inscribirme
+            </button>
+        </div>
+    </nav>
+    
+    <header class="hero-section">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
+                    <span class="badge rounded-pill badge-sf mb-3 fs-6 p-2 fw-bold"><i class="bi bi-lightbulb-fill me-1"></i> WORKSHOP EXCLUSIVO</span>
+                    <h1 class="display-3 fw-bold mb-3 text-white">
+                        Salesforce Foundations:
+                    </h1>
+                    <h2 class="display-6 fw-light mb-4" style="color: var(--sf-light-blue);">
+                        Activa el <strong class="text-warning">poder de Marketing y Data</strong> sin licencias adicionales
+                    </h2>
+                    <p class="lead mb-0 text-white-50">Si ya utilizas Sales o Service Cloud, descubre cómo activar herramientas esenciales de Email Marketing, Automatización (Flows) y Segmentación de Audiencias ya incluidas en tu edición, sin costes extra.</p>
+                    <div class="mt-4">
+                        <span class="badge text-bg-secondary me-2">#EmailMarketing</span>
+                        <span class="badge text-bg-secondary me-2">#Automatización</span>
+                        <span class="badge text-bg-secondary me-2">#Segmentación</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card p-3 sf-card-shadow border-0" id="registro-form">
+                        <div class="card-body">
+                            <h4 class="card-title text-center mb-4 fw-bold text-accent-sf">Asegura tu plaza gratuita</h4>
+                            <form id="salesforceForm" class="contact-form"
+                            action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5w000003XOQ6"
+                            method="POST">
+                                
+                                <input type="hidden" name="oid" value="00D5w000003XOQ6">
+                                <input type="hidden" name="retURL" value="https://tuweb.com/gracias">
+                                <input type="hidden" name="lead_source" value="Foundations Workshop">
+                                
+                                <div class="row g-2">
+                                    <div class="col-md-6 mb-2">
+                                        <input name="first_name" type="text" class="form-control" placeholder="Nombre" required>
+                                    </div>
+                                    <div class="col-md-6 mb-2">
+                                        <input name="last_name" type="text" class="form-control" placeholder="Apellido" required>
+                                    </div>
+                                    
+                                    <div class="col-12 mb-2">
+                                        <input name="email" type="email" class="form-control" placeholder="Email corporativo" id="email" required>
+                                        </div>
+
+                                    <div class="col-md-6 mb-2">
+                                        <input name="company" type="text" class="form-control" placeholder="Empresa" required>
+                                    </div>
+                                    
+                                    <div class="col-md-6 mb-2">
+                                        <input name="mobile" type="tel" class="form-control" placeholder="Teléfono" required
+                                                     title="Ingrese su número de teléfono" />
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid mt-4">
+                                    <button type="submit" name="submit" class="btn btn-sf w-100 py-2 fw-bold">
+                                        ¡QUIERO ACCEDER A MI FOUNDATIONS!
+                                    </button>
+                                </div>
+                                
+                                <small class="text-muted d-block text-center mt-3 small">
+                                    Confirma tu inscripción para reservar tu plaza.
+                                </small>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <h2 class="mb-4 fw-bold text-primary-sf">El Workshop comienza en:</h2>
+            <div class="row justify-content-center" id="countdown">
+                <div class="col-6 col-md-2 mb-3">
+                    <div class="countdown-box border border-accent-sf">
+                        <div class="display-4" id="days">00</div>
+                        <small class="text-muted">Días</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <div class="countdown-box border border-accent-sf">
+                        <div class="display-4" id="hours">00</div>
+                        <small class="text-muted">Horas</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <div class="countdown-box border border-accent-sf">
+                        <div class="display-4" id="minutes">00</div>
+                        <small class="text-muted">Minutos</small>
+                    </div>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <div class="countdown-box border border-accent-sf">
+                        <div class="display-4" id="seconds">00</div>
+                        <small class="text-muted">Segundos</small>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-3 fs-5 text-muted">Miércoles, 10 de Diciembre de 2025 | 12:00 </p>
+        </div>
+    </section>
+
+    <section class="container py-5" id="detalles">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h2 class="text-center mb-5 fw-bold text-primary-sf">Beneficios de activar Foundations en Data & Marketing</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card h-100 p-3 border-0 sf-card-shadow">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-primary-sf"><i class="bi bi-bar-chart-line-fill me-2"></i> Mayor Retorno de Inversión (ROI)</h5>
+                                <p class="card-text small">Al utilizar las herramientas de marketing ya pagas en tu licencia (como Campañas y Email, con límites de envío), reducís la necesidad de adquirir costosas licencias de Marketing Cloud, optimizando el valor de tu inversión en Salesforce actual.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card h-100 p-3 border-0 sf-card-shadow">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold text-primary-sf"><i class="bi bi-arrow-repeat me-2"></i> Simplificación y Data 360</h5>
+                                <p class="card-text small">Elimina la fricción de integrar sistemas externos. Con segmentación y Flows, tu data de Sales y Service se convierte automáticamente en data de Marketing, garantizando una experiencia de cliente 360 sin silos de información.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="my-5 opacity-25">
+
+    <section class="container py-5" id="temario">
+        <h2 class="text-center mb-5 fw-bold text-primary-sf">Temas a cubrir en el Workshop (Foco en Marketing)</h2>
+        <div class="row justify-content-center g-4">
+            
+            <div class="col-lg-5 col-md-6">
+                <div class="card h-100 sf-card-shadow temario-card">
+                    <div class="card-body">
+                        <h5 class="fw-bold text-accent-sf"><i class="bi bi-envelope-check-fill me-2"></i> 1. Email Marketing</h5>
+                        <p class="card-text small text-secondary">
+                            Cómo configurar y utilizar la funcionalidad de campañas de Email Marketing (con 2000 envíos mensuales incluidos). Te mostraremos cómo crear plantillas y activar tu primera comunicación masiva sin salir de tu CRM.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-md-6">
+                <div class="card h-100 sf-card-shadow temario-card">
+                    <div class="card-body">
+                        <h5 class="fw-bold text-accent-sf"><i class="bi bi-bullseye me-2"></i> 2. Segmentación de Audiencias con Data 360</h5>
+                        <p class="card-text small text-secondary">
+                            Aprende a usar las herramientas de segmentación para definir grupos de contactos y Leads basados en su historial (Casos de Servicio, Compras, etc.), alimentando directamente tus campañas de marketing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-5 col-md-6">
+                <div class="card h-100 sf-card-shadow temario-card">
+                    <div class="card-body">
+                        <h5 class="fw-bold text-accent-sf"><i class="bi bi-sliders me-2"></i> 3. Automatización: Flows y Flow templates de Marketing</h5>
+                        <p class="card-text small text-secondary">
+                            Descubre los Flows y Flow templates especializados para marketing. Podrás automatizar acciones como: enviar un email de bienvenida cuando un Lead cambia de estado o iniciar una campaña al cerrar un caso de servicio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-5 col-md-6">
+                <div class="card h-100 sf-card-shadow temario-card">
+                    <div class="card-body">
+                        <h5 class="fw-bold text-accent-sf"><i class="bi bi-stars me-2"></i> 4. Introducción a Einstein STO (Send Time Optimization)</h5>
+                        <p class="card-text small text-secondary">
+                            Entiende cómo la Inteligencia Artificial de Salesforce puede mejorar tus resultados. Veremos cómo Einstein Send Time Optimization (STO) utiliza tu data para enviar emails en el momento óptimo para cada contacto individual.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center mt-5">
+             <a href="#registro-form" class="btn btn-sf btn-lg shadow-lg">Regístrate para ver el temario completo</a>
+        </div>
+    </section>
+    
+    <footer class="bg-primary-sf text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0 small">© 2025 Salesforce Foundations Workshop | Potencia tu CRM. | Powered by Cambalache Technologies & Quintum.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // --- Lógica del Conteo Regresivo ---
+        const eventDate = new Date("Dec 10, 2025 12:00:00").getTime(); 
+
+        const updateCountdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (document.getElementById("days")) document.getElementById("days").innerHTML = days < 10 ? '0' + days : days;
+            if (document.getElementById("hours")) document.getElementById("hours").innerHTML = hours < 10 ? '0' + hours : hours;
+            if (document.getElementById("minutes")) document.getElementById("minutes").innerHTML = minutes < 10 ? '0' + minutes : minutes;
+            if (document.getElementById("seconds")) document.getElementById("seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds;
+
+            if (distance < 0) {
+                clearInterval(updateCountdown);
+                const countdownElement = document.getElementById("countdown");
+                if (countdownElement) {
+                    countdownElement.innerHTML = '<h3 class="text-success fw-bold">¡El evento ha comenzado!</h3>';
+                }
+            }
+        }, 1000);
+
+        // --- Lógica de Validación (Solo Bootstrap Nativo) ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('salesforceForm');
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            }
+        });
+
+    </script>
+</body>
+
+</html>
