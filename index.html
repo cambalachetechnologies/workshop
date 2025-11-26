@@ -78,9 +78,12 @@
             opacity: 0.9;
             transition: opacity 0.3s;
         }
-          .logo-quintum {
-            max-height: 60px; /* Aumentado a 45px */
-            width: auto;
+        /* CORRECCIÓN: Estilo de Quintum para forzar 60px de ancho */
+        .logo-quintum {
+            width: 60px; /* Establecido el ancho a 60px */
+            height: auto; /* Para mantener la proporción */
+            max-width: 60px;
+            max-height: none; /* Se anula el max-height de navbar-logo */
         }
         .temario-card {
             border-left: 5px solid var(--sf-blue);
@@ -104,7 +107,7 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="img/logo-ctech.png" alt="Logo Cambalache Technologies" class="navbar-logo d-none d-md-block">
-                <img src="img/logo-quintum.png" alt="Logo Quintum" class="navbar-logo d-none d-md-block">
+                <img src="img/logo-quintum.png" alt="Logo Quintum" class="navbar-logo logo-quintum d-none d-md-block">
                 <img src="img/logo-partner.png" alt="Salesforce Partner" class="navbar-logo">
                 
                 <span class="fw-bold fs-5 text-primary-sf d-md-none">Foundation<span class="text-accent-sf">Workshop</span></span>
@@ -165,7 +168,7 @@
                                     
                                     <div class="col-md-6 mb-2">
                                         <input name="mobile" type="tel" class="form-control" placeholder="Teléfono" required
-                                                     title="Ingrese su número de teléfono" />
+                                                    title="Ingrese su número de teléfono" />
                                     </div>
                                 </div>
                                 
@@ -298,7 +301,7 @@
 
         </div>
         <div class="text-center mt-5">
-             <a href="#registro-form" class="btn btn-sf btn-lg shadow-lg">Regístrate para ver el temario completo</a>
+            <a href="#registro-form" class="btn btn-sf btn-lg shadow-lg">Regístrate para ver el temario completo</a>
         </div>
     </section>
     
