@@ -10,16 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Paleta de Colores Salesforce */
         :root {
-            --sf-dark-blue: #032D60; /* Azul Oscuro (Primario) */
-            --sf-blue: #0070D2; /* Azul Salesforce (Acento) */
-            --sf-light-blue: #1589EE; /* Azul Claro (Botones) */
-            --sf-success: #28a745; /* Verde para éxito */
+            --sf-dark-blue: #032D60;
+            --sf-blue: #0070D2;
+            --sf-light-blue: #1589EE;
+            --sf-success: #28a745;
         }
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa; /* Fondo blanco/gris claro */
+            background-color: #f4f6f9;
             color: var(--sf-dark-blue);
         }
         .bg-primary-sf {
@@ -36,43 +35,32 @@
         }
         .btn-sf:hover {
             background-color: var(--sf-blue);
-            border-color: var(--sf-blue);
             color: white;
             transform: translateY(-2px);
         }
         .thank-you-container {
-            min-height: 80vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
             padding: 2rem;
         }
         .confirmation-box {
             background-color: white;
             padding: 3rem;
-            border-radius: 1rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-top: 5px solid var(--sf-success); /* Borde de éxito */
+            border-radius: 1.5rem;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-top: 6px solid var(--sf-success);
         }
         .icon-success {
             color: var(--sf-success);
-            font-size: 5rem;
-            margin-bottom: 1.5rem;
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
         }
-        .next-steps-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 2rem;
-            text-align: left;
-        }
-        .next-steps-list li {
-            padding: 0.75rem 0;
-            border-bottom: 1px dashed #e9ecef;
-            font-size: 1.1rem;
-        }
-        .next-steps-list li:last-child {
-            border-bottom: none;
+        .event-detail-card {
+            background-color: #f8faff;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
         }
     </style>
 </head>
@@ -80,49 +68,68 @@
 <body>
 
     <main class="thank-you-container">
-        <div class="container">
+        <div class="container text-center">
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-10 col-xl-8">
                     <div class="confirmation-box">
                         
                         <div class="icon-success">
-                            <i class="bi bi-check-circle-fill"></i>
+                            <i class="bi bi-patch-check-fill"></i>
                         </div>
 
                         <h1 class="display-5 fw-bold text-success mb-3">
-                            ¡Inscripción confirmada!
+                            ¡Ya tienes tu lugar asegurado!
                         </h1>
                         <p class="lead mb-4 text-primary-sf">
-                            Gracias por registrarte en el Salesforce Foundations Workshop: <br>Marketing y Data
+                            Prepárate para activar el poder de <strong>Agentforce e IA</strong> en tu CRM actual sin costo adicional.
                         </p>
 
-                        <div class="alert alert-info border-0 p-3" role="alert" style="background-color: #e6f3ff;">
-                            <h5 class="fw-bold text-accent-sf mb-1"><i class="bi bi-calendar-event me-2"></i> Detalles del evento</h5>
-                            <p class="mb-0 small text-primary-sf">
-                                Fecha: Miércoles, 10 de Diciembre de 2025<br>
-                                Hora: 12:00 ARG (Revisa tu zona horaria)<br>
-                                Modalidad: Online
-                            </p>
+                        <div class="event-detail-card p-4 mb-4">
+                            <h5 class="fw-bold text-accent-sf mb-3"><i class="bi bi-calendar3 me-2"></i> Cronograma de Mayo 2026</h5>
+                            <div class="row text-start g-3 small">
+                                <div class="col-md-4">
+                                    <div class="p-2 border rounded bg-white">
+                                        <strong>Día 1: Sales + AI</strong><br>
+                                        <span class="text-muted">Martes 12 de mayo</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-2 border rounded bg-white">
+                                        <strong>Día 2: Service + AI</strong><br>
+                                        <span class="text-muted">Miércoles 13 de mayo</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-2 border rounded bg-white">
+                                        <strong>Día 3: Marketing + AI</strong><br>
+                                        <span class="text-muted">Jueves 14 de mayo</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 pt-3 border-top d-flex justify-content-center gap-3 flex-wrap">
+                                <span class="badge bg-white text-dark border p-2">🇨🇷 11:00</span>
+                                <span class="badge bg-white text-dark border p-2">🇪🇨 12:00</span>
+                                <span class="badge bg-white text-dark border p-2">🇵🇪 12:00</span>
+                                <span class="badge bg-white text-dark border p-2">🇦🇷 14:00</span>
+                            </div>
                         </div>
 
-                        <hr>
+                        <div class="text-start mt-4">
+                            <h5 class="fw-bold text-primary-sf mb-3">Siguientes pasos:</h5>
+                            <div class="d-flex mb-3">
+                                <div class="me-3"><span class="badge rounded-circle bg-success">1</span></div>
+                                <p class="mb-0 small"><strong>Revisa tu bandeja de entrada:</strong> Te hemos enviado un correo con el enlace de acceso y material previo sobre <strong>Customer 360</strong>.</p>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <div class="me-3"><span class="badge rounded-circle bg-success">2</span></div>
+                                <p class="mb-0 small"><strong>Identifica tus retos:</strong> Piensa qué procesos de ventas o servicio te gustaría que <strong>Agentforce</strong> resolviera automáticamente (¡hasta un 30% de casos!).</p>
+                            </div>
+                        </div>
 
-                        <h4 class="fw-bold text-primary-sf mt-4 mb-3">
-                            Pasos siguientes importantes:
-                        </h4>
-                        
-                        <ul class="next-steps-list">
-                            <li>
-                                <span class="badge bg-success me-2">1</span> Revisa tu correo: Te enviaremos un email de confirmación con el enlace de acceso al Workshop y las instrucciones finales.
-                            </li>
-                            <li>
-                                <span class="badge bg-success me-2">2</span> Prepara tus preguntas: Piensa en las áreas de Marketing y Data de tu CRM actual que deseas optimizar para aprovechar la sesión de preguntas y respuestas.
-                            </li>
-                        </ul>
-
-                        <div class="mt-4">
-                            <a href="https://cambalachetechnologies.github.io/workshop/" class="btn btn-sf btn-lg">
-                                <i class="bi bi-arrow-left me-2"></i> Volver al inicio
+                        <div class="mt-5">
+                            <a href="index.html" class="btn btn-sf btn-lg px-5 shadow-sm">
+                                <i class="bi bi-house-door me-2"></i> Volver al inicio
                             </a>
                         </div>
                     </div>
@@ -131,9 +138,9 @@
         </div>
     </main>
 
-    <footer class="bg-primary-sf text-white py-3">
+    <footer class="bg-primary-sf text-white py-4">
         <div class="container text-center">
-            <p class="mb-0 small">© 2025 Salesforce Foundations Workshop | Potencia tu CRM.</p>
+            <p class="mb-0 small">© 2026 Salesforce Foundations Workshop | Potencia tu CRM con IA gratuita.</p>
         </div>
     </footer>
 
