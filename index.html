@@ -80,9 +80,9 @@
         }
         /* CORRECCIÓN: Estilo de Quintum para forzar 60px de ancho */
         .logo-quintum {
-            width: 80px; /* Establecido el ancho a 60px */
+            width: 100px; /* Establecido el ancho a 60px */
             height: auto; /* Para mantener la proporción */
-            max-width: 80px;
+            max-width: 100px;
             max-height: none; /* Se anula el max-height de navbar-logo */
         }
         .temario-card {
@@ -108,7 +108,9 @@
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="img/logo-ctech.png" alt="Logo Cambalache Technologies" class="navbar-logo d-none d-md-block">
                 <img src="img/logo-quintum.png" alt="Logo Quintum" class="navbar-logo logo-quintum d-none d-md-block">
-                <img src="img/logo-partner.png" alt="Salesforce Partner" class="navbar-logo">
+                <img src="img/logo-nexsys.png" alt="Logo Nexsys" class="navbar-logo d-none d-md-block">
+                <img src="img/logo-reseller.png" alt="Logo Reseller" class="navbar-logo d-none d-md-block">
+        
                 
                 <span class="fw-bold fs-5 text-primary-sf d-md-none">Foundation<span class="text-accent-sf">Workshop</span></span>
             </a>
@@ -119,29 +121,31 @@
         </div>
     </nav>
     
-    <header class="hero-section">
+<header class="hero-section">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0">
-                    <span class="badge rounded-pill badge-sf mb-3 fs-6 p-2 fw-bold"><i class="bi bi-lightbulb-fill me-1"></i> WORKSHOP EXCLUSIVO</span>
+                    <span class="badge rounded-pill badge-sf mb-3 fs-6 p-2 fw-bold"><i class="bi bi-cpu-fill me-1"></i> WORKSHOP EXCLUSIVO: IA + CRM</span>
                     <h1 class="display-3 fw-bold mb-3 text-white">
                         Salesforce Foundations:
                     </h1>
                     <h2 class="display-6 fw-light mb-4" style="color: var(--sf-light-blue);">
-                        Activa el <strong class="text-warning">poder de Marketing</strong> sin licencias adicionales
+                        Impulsa <strong class="text-warning">IA, Ventas y Servicio</strong> sin licencias adicionales
                     </h2>
-                    <p class="lead mb-0 text-white-50">Si ya utilizas Sales o Service Cloud, descubre cómo activar herramientas esenciales de Email Marketing, Automatización (Flows) y Segmentación de Audiencias ya incluidas en tu edición, sin costes extra.</p>
+                    <p class="lead mb-0 text-white-50">
+                        Descubre cómo activar el poder de <strong>Agentforce (IA)</strong> y unificar las funciones clave de Sales, Service y Marketing Cloud en tu edición actual. Optimiza tu inversión y obtén una visión 360 de tus clientes sin costes extra.
+                    </p>
                     <div class="mt-4">
-                        <span class="badge text-bg-secondary me-2">#EmailMarketing</span>
-                        <span class="badge text-bg-secondary me-2">#Automatización</span>
-                        <span class="badge text-bg-secondary me-2">#Segmentación</span>
+                        <span class="badge text-bg-secondary me-2">#AgentforceAI</span>
+                        <span class="badge text-bg-secondary me-2">#SalesforceFoundations</span>
+                        <span class="badge text-bg-secondary me-2">#Customer360</span>
                     </div>
                 </div>
 
                 <div class="col-lg-5">
                     <div class="card p-3 sf-card-shadow border-0" id="registro-form">
                         <div class="card-body">
-                            <h4 class="card-title text-center mb-4 fw-bold text-accent-sf">Asegura tu plaza gratuita</h4>
+                            <h4 class="card-title text-center mb-4 fw-bold text-accent-sf">Asegura tu plaza</h4>
                             <form id="salesforceForm" class="contact-form"
                             action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5w000003XOQ6"
                             method="POST">
@@ -150,27 +154,33 @@
                                 <input type="hidden" name="retURL" value="https://cambalachetechnologies.github.io/workshop/subpaginas/gracias">
                                 <input type="hidden" name="lead_source" value="Campaña">
                                 
-                                <div class="row g-2">
-                                    <div class="col-md-6 mb-2">
-                                        <input name="first_name" type="text" class="form-control" placeholder="Nombre" required>
-                                    </div>
-                                    <div class="col-md-6 mb-2">
-                                        <input name="last_name" type="text" class="form-control" placeholder="Apellido" required>
-                                    </div>
-                                    
-                                    <div class="col-12 mb-2">
-                                        <input name="email" type="email" class="form-control" placeholder="Email corporativo" id="email" required>
-                                        </div>
+<div class="row g-2">
+    <div class="col-md-6 mb-2">
+        <input name="first_name" type="text" class="form-control" placeholder="Nombre" required>
+    </div>
+    <div class="col-md-6 mb-2">
+        <input name="last_name" type="text" class="form-control" placeholder="Apellido" required>
+    </div>
+    
+    <div class="col-12 mb-2">
+        <input name="email" type="email" class="form-control" placeholder="Email corporativo" id="email" required>
+    </div>
 
-                                    <div class="col-md-6 mb-2">
-                                        <input name="company" type="text" class="form-control" placeholder="Empresa" required>
-                                    </div>
-                                    
-                                    <div class="col-md-6 mb-2">
-                                        <input name="mobile" type="tel" class="form-control" placeholder="Teléfono" required
-                                                    title="Ingrese su número de teléfono" />
-                                    </div>
-                                </div>
+    <div class="col-md-6 mb-2">
+        <input name="company" type="text" class="form-control" placeholder="Empresa" required>
+    </div>
+    <div class="col-md-6 mb-2">
+        <input name="title" type="text" class="form-control" placeholder="Cargo" required>
+    </div>
+    
+    <div class="col-md-6 mb-2">
+        <input name="mobile" type="tel" class="form-control" placeholder="Teléfono" required
+               title="Ingrese su número de teléfono" />
+    </div>
+    <div class="col-md-6 mb-2">
+        <input name="country" type="text" class="form-control" placeholder="País" required>
+    </div>
+</div>
                                 
                                 <div class="d-grid mt-4">
                                     <button type="submit" name="submit" class="btn btn-sf w-100 py-2 fw-bold">
@@ -189,155 +199,177 @@
         </div>
     </header>
 
-    <section class="py-5 bg-white border-bottom">
-        <div class="container text-center">
-            <h2 class="mb-4 fw-bold text-primary-sf">El Workshop comienza en:</h2>
-            <div class="row justify-content-center" id="countdown">
-                <div class="col-6 col-md-2 mb-3">
-                    <div class="countdown-box border border-accent-sf">
-                        <div class="display-4" id="days">00</div>
-                        <small class="text-muted">Días</small>
-                    </div>
-                </div>
-                <div class="col-6 col-md-2 mb-3">
-                    <div class="countdown-box border border-accent-sf">
-                        <div class="display-4" id="hours">00</div>
-                        <small class="text-muted">Horas</small>
-                    </div>
-                </div>
-                <div class="col-6 col-md-2 mb-3">
-                    <div class="countdown-box border border-accent-sf">
-                        <div class="display-4" id="minutes">00</div>
-                        <small class="text-muted">Minutos</small>
-                    </div>
-                </div>
-                <div class="col-6 col-md-2 mb-3">
-                    <div class="countdown-box border border-accent-sf">
-                        <div class="display-4" id="seconds">00</div>
-                        <small class="text-muted">Segundos</small>
-                    </div>
-                </div>
-            </div>
-            <p class="mt-3 fs-5 text-muted">Miércoles, 10 de Diciembre de 2025 | 12:00 </p>
-        </div>
-    </section>
-
-    <section class="container py-5" id="detalles">
+    <section class="py-5 bg-white border-bottom" id="sobre-foundations">
+    <div class="container text-center">
+        <h2 class="display-5 fw-bold text-primary-sf mb-4">¿Qué es Salesforce Foundations?</h2>
+        
         <div class="row justify-content-center">
             <div class="col-lg-10">
-                <h2 class="text-center mb-5 fw-bold text-primary-sf">Beneficios de activar Foundations Marketing</h2>
-                <div class="row g-4">
-                    <div class="col-md-6">
-                        <div class="card h-100 p-3 border-0 sf-card-shadow">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold text-primary-sf"><i class="bi bi-bar-chart-line-fill me-2"></i> Mayor Retorno de Inversión (ROI)</h5>
-                                <p class="card-text small">Al utilizar las herramientas de marketing ya pagas en tu licencia (como Campañas y Email, con límites de envío), reducís la necesidad de adquirir costosas licencias de Marketing Cloud, optimizando el valor de tu inversión en Salesforce actual.</p>
-                            </div>
-                        </div>
-                    </div>
+                <p class="lead text-dark mb-5">
+                    Salesforce Foundations es un complemento <strong>gratuito</strong> que permite obtener una visión integral de tus clientes activando capacidades avanzadas en tu CRM actual, sin costo alguno. Su propósito es integrar a tus equipos y datos con las funciones clave de las aplicaciones Customer 360, eliminando la fragmentación de información entre departamentos.
+                </p>
+    </div>            
+    </div>
+    </div> 
+</section>
 
-                    <div class="col-md-6">
-                        <div class="card h-100 p-3 border-0 sf-card-shadow">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold text-primary-sf"><i class="bi bi-arrow-repeat me-2"></i> Simplificación y Data 360</h5>
-                                <p class="card-text small">Elimina la fricción de integrar sistemas externos. Con segmentación y Flows, tu data de Sales y Service se convierte automáticamente en data de Marketing, garantizando una experiencia de cliente 360 sin silos de información.</p>
-                            </div>
-                        </div>
+<section class="container py-5" id="agenda">
+    <h2 class="text-center mb-5 fw-bold text-primary-sf">Cronograma del Workshop</h2>
+    <div class="row g-4">
+        
+        <div class="col-lg-4">
+            <div class="card h-100 border-0 sf-card-shadow text-center p-4">
+                <div class="mb-3">
+                    <span class="badge rounded-pill bg-light text-primary-sf border px-3 py-2">
+                        <i class="bi bi-calendar-event me-1"></i> Martes 12 de mayo 2026
+                    </span>
+                </div>
+                <div class="display-6 text-accent-sf mb-3"><i class="bi bi-graph-up-arrow"></i></div>
+                <h4 class="fw-bold text-primary-sf">Sales + AI</h4>
+                <p class="card-text small text-secondary">
+                    Taller orientado a la activación de funcionalidades de Sales potenciadas con IA para mejorar la gestión de leads y oportunidades. Se explorará cómo la inteligencia artificial ayuda a priorizar prospectos y obtener insights predictivos.
+                </p>
+                <div class="mt-auto pt-3 border-top">
+                    <p class="mb-2 fw-bold text-primary-sf small"><i class="bi bi-clock-fill me-1"></i> Horarios Locales:</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <small class="text-muted">🇨🇷 11:00</small>
+                        <small class="text-muted">🇪🇨 12:00</small>
+                        <small class="text-muted">🇵🇪 12:00</small>
+                        <small class="text-muted">🇦🇷 14:00</small>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <div class="col-lg-4">
+            <div class="card h-100 border-0 sf-card-shadow text-center p-4">
+                <div class="mb-3">
+                    <span class="badge rounded-pill bg-light text-primary-sf border px-3 py-2">
+                        <i class="bi bi-calendar-event me-1"></i> Miércoles 13 de mayo 2026
+                    </span>
+                </div>
+                <div class="display-6 text-danger mb-3"><i class="bi bi-heart-fill"></i></div>
+                <h4 class="fw-bold text-primary-sf">Service + AI</h4>
+                <p class="card-text small text-secondary">
+                    Enfoque en la activación de capacidades de Service con IA para optimizar la atención al cliente. Incluye asistentes inteligentes, automatización de casos y análisis de sentimiento.
+                </p>
+                <div class="mt-auto pt-3 border-top">
+                    <p class="mb-2 fw-bold text-primary-sf small"><i class="bi bi-clock-fill me-1"></i> Horarios Locales:</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <small class="text-muted">🇨🇷 11:00</small>
+                        <small class="text-muted">🇪🇨 12:00</small>
+                        <small class="text-muted">🇵🇪 12:00</small>
+                        <small class="text-muted">🇦🇷 14:00</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card h-100 border-0 sf-card-shadow text-center p-4">
+                <div class="mb-3">
+                    <span class="badge rounded-pill bg-light text-primary-sf border px-3 py-2">
+                        <i class="bi bi-calendar-event me-1"></i> Jueves 14 de mayo 2026
+                    </span>
+                </div>
+                <div class="display-6 text-warning mb-3"><i class="bi bi-megaphone-fill"></i></div>
+                <h4 class="fw-bold text-primary-sf">Marketing + AI</h4>
+                <p class="card-text small text-secondary">
+                    Taller centrado en la activación de funcionalidades de Marketing impulsadas por IA para personalizar campañas. Abordará segmentación inteligente y automatización de journeys.
+                </p>
+                <div class="mt-auto pt-3 border-top">
+                    <p class="mb-2 fw-bold text-primary-sf small"><i class="bi bi-clock-fill me-1"></i> Horarios Locales:</p>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <small class="text-muted">🇨🇷 11:00</small>
+                        <small class="text-muted">🇪🇨 12:00</small>
+                        <small class="text-muted">🇵🇪 12:00</small>
+                        <small class="text-muted">🇦🇷 14:00</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="container py-5" id="detalles">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <h2 class="text-center mb-2 fw-bold text-primary-sf">Resultados Reales con Salesforce Foundations</h2>
+            <p class="text-center text-muted mb-5 small">Inspirado en el éxito de empresas como VEV: Visión 360 y IA en solo 2-4 semanas.</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 p-3 border-0 sf-card-shadow">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary-sf">
+                                <i class="bi bi-cpu-fill me-2"></i> Eficiencia con Agentforce
+                            </h5>
+                            <p class="card-text small">
+                                Logra que la automatización resuelva hasta el <strong>30% de los casos de servicio</strong> de forma autónoma. Con la IA de Agentforce, los equipos resuelven incidencias un <strong>40% más rápido</strong>, permitiendo que tu talento se enfoque en tareas de alto valor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 p-3 border-0 sf-card-shadow">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary-sf">
+                                <i class="bi bi-graph-up-arrow me-2"></i> Incremento en Ventas
+                            </h5>
+                            <p class="card-text small">
+                                Al integrar Sales y Service Cloud, identificas oportunidades de venta cruzada que antes eran invisibles. Estas estrategias pueden aumentar tus <strong>ventas en un 20%</strong> y tus ganancias en un 30% gracias a la visibilidad total del cliente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 p-3 border-0 sf-card-shadow">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary-sf">
+                                <i class="bi bi-person-heart me-2"></i> Experiencia Personalizada
+                            </h5>
+                            <p class="card-text small">
+                                Utiliza Data Cloud para conectar tus datos y generar información de marketing en tiempo real. Envía el mensaje adecuado en el momento justo; recuerda que el <strong>81% de los clientes</strong> prefiere empresas que ofrecen experiencias personalizadas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card h-100 p-3 border-0 sf-card-shadow">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-primary-sf">
+                                <i class="bi bi-lightning-charge-fill me-2"></i> Implementación Express
+                            </h5>
+                            <p class="card-text small">
+                                Foundations es un <strong>complemento gratuito</strong> para clientes empresariales que rompe los silos departamentales de inmediato. Empieza a ver resultados tangibles y una ventaja competitiva real en tan solo <strong>2 a 4 semanas</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5 p-4 bg-light rounded-4 text-center border-start border-4 border-accent-sf">
+                <p class="fst-italic mb-2">"La adopción de múltiples productos de Salesforce y la integración de nuestros sistemas nos ha proporcionado una ventaja competitiva."</p>
+                <small class="fw-bold">— Asbjørn Basnes, CTO de VEV</small>
+            </div>
+        </div>
+    </div>
+</section>
 
     <hr class="my-5 opacity-25">
-
-    <section class="container py-5" id="temario">
-        <h2 class="text-center mb-5 fw-bold text-primary-sf">Temas a cubrir en el Workshop (Foco en Marketing)</h2>
-        <div class="row justify-content-center g-4">
-            
-            <div class="col-lg-5 col-md-6">
-                <div class="card h-100 sf-card-shadow temario-card">
-                    <div class="card-body">
-                        <h5 class="fw-bold text-accent-sf"><i class="bi bi-envelope-check-fill me-2"></i> 1. Email Marketing</h5>
-                        <p class="card-text small text-secondary">
-                            Cómo configurar y utilizar la funcionalidad de campañas de Email Marketing (con 2000 envíos mensuales incluidos). Te mostraremos cómo crear plantillas y activar tu primera comunicación masiva sin salir de tu CRM.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-5 col-md-6">
-                <div class="card h-100 sf-card-shadow temario-card">
-                    <div class="card-body">
-                        <h5 class="fw-bold text-accent-sf"><i class="bi bi-bullseye me-2"></i> 2. Segmentación de Audiencias con Data 360</h5>
-                        <p class="card-text small text-secondary">
-                            Aprende a usar las herramientas de segmentación para definir grupos de contactos y Leads basados en su historial (Casos de Servicio, Compras, etc.), alimentando directamente tus campañas de marketing.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-5 col-md-6">
-                <div class="card h-100 sf-card-shadow temario-card">
-                    <div class="card-body">
-                        <h5 class="fw-bold text-accent-sf"><i class="bi bi-sliders me-2"></i> 3. Automatización: Flows y Flow templates de Marketing</h5>
-                        <p class="card-text small text-secondary">
-                            Descubre los Flows y Flow templates especializados para marketing. Podrás automatizar acciones como: enviar un email de bienvenida cuando un Lead cambia de estado o iniciar una campaña al cerrar un caso de servicio.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-5 col-md-6">
-                <div class="card h-100 sf-card-shadow temario-card">
-                    <div class="card-body">
-                        <h5 class="fw-bold text-accent-sf"><i class="bi bi-stars me-2"></i> 4. Introducción a Einstein STO (Send Time Optimization)</h5>
-                        <p class="card-text small text-secondary">
-                            Entiende cómo la Inteligencia Artificial de Salesforce puede mejorar tus resultados. Veremos cómo Einstein Send Time Optimization (STO) utiliza tu data para enviar emails en el momento óptimo para cada contacto individual.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="text-center mt-5">
-            <a href="#registro-form" class="btn btn-sf btn-lg shadow-lg">Regístrate para ver el temario completo</a>
-        </div>
-    </section>
     
     <footer class="bg-primary-sf text-white py-4 mt-5">
         <div class="container text-center">
-            <p class="mb-0 small">© 2025 Salesforce Foundations Workshop | Potencia tu CRM. | Powered by Cambalache Technologies & Quintum.</p>
+            <p class="mb-0 small">© 2025 Salesforce Foundations Workshop | Potencia tu CRM. | Powered by Cambalache Technologies, Quintum & Nexsys.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // --- Lógica del Conteo Regresivo ---
-        const eventDate = new Date("Dec 10, 2025 12:00:00").getTime(); 
-
-        const updateCountdown = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = eventDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            if (document.getElementById("days")) document.getElementById("days").innerHTML = days < 10 ? '0' + days : days;
-            if (document.getElementById("hours")) document.getElementById("hours").innerHTML = hours < 10 ? '0' + hours : hours;
-            if (document.getElementById("minutes")) document.getElementById("minutes").innerHTML = minutes < 10 ? '0' + minutes : minutes;
-            if (document.getElementById("seconds")) document.getElementById("seconds").innerHTML = seconds < 10 ? '0' + seconds : seconds;
-
-            if (distance < 0) {
-                clearInterval(updateCountdown);
-                const countdownElement = document.getElementById("countdown");
-                if (countdownElement) {
-                    countdownElement.innerHTML = '<h3 class="text-success fw-bold">¡El evento ha comenzado!</h3>';
-                }
-            }
-        }, 1000);
 
         // --- Lógica de Validación (Solo Bootstrap Nativo) ---
         document.addEventListener('DOMContentLoaded', function() {
@@ -357,3 +389,4 @@
 </body>
 
 </html>
+
